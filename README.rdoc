@@ -17,5 +17,10 @@ costumes available for women around Halloween. I mean really - sexy
 Sherlock Holmes? Sexy Mary Poppins? Those make about as much sense as
 {Sexy Euplynes}[http://en.wikipedia.org/wiki/Euplynes].
 
-=== License:
-* MIT. See LICENSE file.
+=== Baking powder?
+
+If that's all too abstract, you can {see it in action on Heroku}[http://halloween-helper.herokuapp.com].
+
+=== License
+
+MIT. See LICENSE file.
