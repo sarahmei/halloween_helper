@@ -1,4 +1,4 @@
-===={Halloween Helper}[http://halloween-helper.herokuapp.com]
+=={Halloween Helper}[http://halloween-helper.herokuapp.com]
 
 === What's this?
 
