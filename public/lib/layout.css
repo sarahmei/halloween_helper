@@ -1,0 +1,38 @@
+body {
+    background-color: orange;
+    font-family: dejarip;
+    line-height: normal;
+}
+
+a {
+    color: #333;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.btn {
+    font-weight: normal;
+    font-family: inherit;
+}
+
+.row {
+    margin: 15px 0; }
+
+#header {
+    color: black;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.answer {
+    color: white;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.answer a {
+    color: white;
+}
