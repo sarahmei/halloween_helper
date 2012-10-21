@@ -5,7 +5,21 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require './db/models/article'
 
-set :database, 'postgres:///halloween_helper'
+configure :development, :test do
+  set :database, 'postgres:///halloween_helper'
+end
+
+configure :production do
+  db = URI.parse(ENV['DATABASE_URL'])
+  ActiveRecord::Base.establish_connection(
+    :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
+    :host     => db.host,
+    :username => db.user,
+    :password => db.password,
+    :database => db.path[1..-1],
+    :encoding => 'utf8'
+  )
+end
 
 configure :production do
   require 'newrelic_rpm'
