@@ -27,7 +27,7 @@ end
 
 # Homepage
 get '/' do
-  @article = Article.order("number_of_votes DESC").first
+  @article = Article.order("number_of_votes DESC").first || Article.create_from_wikipedia!
   haml :result
 end
 
@@ -42,23 +42,12 @@ end
 
 get '/articles/:article_id' do
   article_id = params[:article_id]
-  @article = Article.find_by_id(article_id) || Article.new do |article|
-    article.id = article_id
-    article.title = article_data["title"]
-    article.save!
-  end
+  @article = Article.find_by_id(article_id)
   haml :result
 end
 
 post '/' do
-  article_result = Wikipedia::Client.new.request('action' => 'query', 'list' => 'random', 'rnnamespace' => '0')
-  article_data = JSON.parse(article_result)["query"]["random"].first
-  article_id = article_data["id"]
-  @article = Article.find_by_id(article_id) || Article.new do |article|
-    article.id = article_id
-    article.title = article_data["title"]
-    article.save!
-  end
+  @article = Article.create_from_wikipedia!
   haml :result
 end
 
