@@ -1,0 +1,48 @@
+.row
+  .span12
+    %h3 Anything's sexy when it's halloween!
+    %p
+      Brought to you by
+        %a{:href => "http://twitter.com/sarahmei"} @sarahmei
+        and
+        %a{:href => "http://twitter.com/msfionatay"} @msfionatay
+      Powered by the Wikipedia random article API.
+    %p
+      When you hit the button, it retrieves a random article from Wikipedia.
+      Then it prepends "sexy," and voila, instant costume idea.
+      Because anything's sexy on Halloween!
+    %p
+      Inspired by the following WTFs (and hundreds of others):
+      %ul
+        %li
+          %a{:href => "http://www.yandy.com/Pinup-Mouse-Costume.php"} Sexy Minnie Mouse
+        %li
+          %a{:href => "http://www.yandy.com/Sexy-Watermelon-Costume.php"} Sexy Watermelon
+        %li
+          %a{:href => "http://www.yandy.com/Sexy-Red-Plumber-Costume.php"} Sexy Mario
+          (also comes in
+          = succeed ")" do
+            %a{:href => "http://www.yandy.com/Sexy-Green-Plumber-Costume.php"} Luigi
+        %li
+          %a{:href => "http://www.yandy.com/Sequin-Clown-Fish.php"} Sexy Nemo
+          (of Finding fame)
+        %li
+          %a{:href => "http://www.yandy.com/Detective-Imma-Watchya.php"} Sexy Sherlock Holmes
+        %li
+          %a{:href => "http://www.yandy.com/spoonful-of-sugar-costume"} Sexy Mary Poppins
+        %li
+          %a{:href => "http://www.yandy.com/Sexy-Lumberjack-Costume.php"} Sexy Lumberjack
+        %li
+          %a{:href => "http://www.yandy.com/Lorax-Hood-and-Yellow-Dress.php"} Sexy Lorax
+      These are not affiliate links...just some of the weirder costumes I found looking around. If you get a
+      particularly good one from the generator, consider telling me about it
+      = succeed "." do
+        %a{:href => "http://twitter.com/sarahmei"} on twitter
+      \:)
+    %p
+      %a{:href => "http://github.com/sarahmei/halloween_helper"} You can get the code for Halloween Helper on Github.
+      This was a really fun Saturday afternoon hack.
+    %form{:action => "/", :method => "post"}
+      %button.btn.btn-large{:type => "submit"}
+        %i.icon-refresh
+        Get a suggestion
