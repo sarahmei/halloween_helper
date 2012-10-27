@@ -3,9 +3,9 @@
     %h3 Anything's sexy when it's halloween!
     %p
       Brought to you by
-        %a{:href => "http://twitter.com/sarahmei"} @sarahmei
-        and
-        %a{:href => "http://twitter.com/msfionatay"} @msfionatay
+      %a{:href => "http://twitter.com/sarahmei"} @sarahmei
+      and
+      %a{:href => "http://twitter.com/msfionatay"} @msfionatay
       Powered by the Wikipedia random article API.
     %p
       When you hit the button, it retrieves a random article from Wikipedia.
@@ -42,7 +42,6 @@
     %p
       %a{:href => "http://github.com/sarahmei/halloween_helper"} You can get the code for Halloween Helper on Github.
       This was a really fun Saturday afternoon hack.
-    %form{:action => "/", :method => "post"}
-      %button.btn.btn-large{:type => "submit"}
-        %i.icon-refresh
-        Get a suggestion
+    %a.btn.btn-large{href: '/'}
+      %i.icon-refresh
+      Get a suggestion

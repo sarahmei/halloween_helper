@@ -9,10 +9,6 @@ a {
     font-weight: bold;
 }
 
-a:hover {
-    text-decoration: none;
-}
-
 .btn {
     font-weight: normal;
     font-family: inherit;

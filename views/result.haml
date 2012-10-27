@@ -2,7 +2,8 @@
   .span12
     %span.answer
       .span1
-        = @article.number_of_votes
+        %a{href: @article.url}
+          = @article.number_of_votes
       .span11
       You should be a
       %a{:href => "http://en.wikipedia.org/wiki/#{@article.title}"}
@@ -13,13 +14,15 @@
       %button.btn.btn-large{:type => "submit"}
         %i.icon-heart
         Love it!
-    %form{:action => "/", :method => "post", :style => "display:inline;"}
-      %button.btn.btn-large{:type => "submit"}
-        %i.icon-refresh
-        Another suggestion?
+    %a.btn.btn-large{href: '/'}
+      %i.icon-refresh
+      Another suggestion?
 
 .row
   .span12
-    %a.twitter-share-button{"data-text" => "I'm going to be a sexy #{@article.title.upcase} for Halloween! Get your recommendation too!", "data-url" => "http://halloween-helper.herokuapp.com/articles/#{@article.id}", :href => "https://twitter.com/share"} Tweet your costume!
+    %a.twitter-share-button{"data-text" => "I'm going to be a sexy #{@article.title.upcase} for Halloween! Get your recommendation too!",
+    "data-counturl" => "http://halloween-helper.herokuapp.com",
+    "data-url" => @article.url,
+    :href => "https://twitter.com/share"} Tweet your costume!
     :javascript
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

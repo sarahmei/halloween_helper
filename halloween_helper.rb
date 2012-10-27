@@ -27,7 +27,7 @@ end
 
 # Homepage
 get '/' do
-  @article = Article.order("number_of_votes DESC").first || Article.create_from_wikipedia!
+  @article = Article.create_from_wikipedia!
   haml :result
 end
 
@@ -43,11 +43,6 @@ end
 get '/articles/:article_id' do
   article_id = params[:article_id]
   @article = Article.find_by_id(article_id)
-  haml :result
-end
-
-post '/' do
-  @article = Article.create_from_wikipedia!
   haml :result
 end
 

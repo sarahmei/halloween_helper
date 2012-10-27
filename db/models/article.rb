@@ -11,4 +11,8 @@ class Article < ActiveRecord::Base
       article.save!
     end
   end
+
+  def url
+    "http://halloween-helper.herokuapp.com/articles/#{id}"
+  end
 end
